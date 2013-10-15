@@ -25,8 +25,8 @@ class LibraryParser
 
     end
 
-    def get_artist
-      @files[2].split(" - ").first
+    def get_artist(file)
+      file.split(" - ").first
     end
 
     def get_genre
@@ -36,7 +36,6 @@ class LibraryParser
 
 end
 
-binding.pry
 
 #
 
