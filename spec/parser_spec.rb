@@ -22,11 +22,6 @@ describe LibraryParser do
         artist3 = parser.get_artist("Mr. Muthafuckin eXquire - Huzzah (Remix ft. Despot, Das Racist, Danny Brown and El-P) [rock].mp3")
 
         artist3.should eq("Mr. Muthafuckin eXquire")
-
-
-
-
-
         artist1.should eq("Action Bronson")
         artist2.should eq("Zoo Kid")
 
@@ -52,8 +47,6 @@ describe LibraryParser do
         title3.should eq("Huzzah (Remix ft. Despot, Das Racist, Danny Brown and El-P)")
         title1.should eq("Larry Csonka")
         title2.should eq("Out Getting Ribs")
-
-    
 
     end
 

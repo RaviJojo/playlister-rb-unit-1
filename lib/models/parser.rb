@@ -35,7 +35,7 @@ require 'pry'
             song_artist.add_song(new_song) 
 
         end
-        binding.pry
+        songs = Song.all
     end
 
         # 1. create a new song object
