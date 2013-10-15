@@ -1,3 +1,5 @@
+require 'pry'
+
 class LibraryParser
 require 'pry'
 
@@ -17,24 +19,21 @@ require 'pry'
 
     def get_title
         
-
     end
 
     def get_artist
-
+      all_artists = @files.collect do |file|
+        file.split(" - ").first
+      end
     end
 
     def get_genre(file)
       file.split('[')[-1].split(']').first
     end
 
-
-
-
-
-
 end
 
+binding.pry
 
 #
 
