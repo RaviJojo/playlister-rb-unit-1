@@ -25,6 +25,7 @@ class LibraryParser
 
     end
 
+
     def get_artist(file)
       file.split(" - ").first
     end
@@ -37,6 +38,11 @@ class LibraryParser
 end
 
 
+
+  # def get_artist
+  #     all_artists = @files.collect do |file|
+  #       file.split(" - ").first
+  #     end
 #
 
 # goal
