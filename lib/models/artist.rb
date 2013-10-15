@@ -1,3 +1,4 @@
+require 'pry'
 class Artist
     attr_accessor :name, :songs, :genres
 
@@ -10,7 +11,7 @@ class Artist
        @@artists << self
     end
 
-    def add_song(song)
+    def add_song(song) # should take song object
         self.songs << song
         self.genres << song.genre # add the song's genre to the artist's @genres
 
@@ -25,6 +26,7 @@ class Artist
     end
 
     def self.all
+        puts "Artist.all called!"
         @@artists
     end
 
@@ -35,5 +37,16 @@ class Artist
     def self.reset_artists
         @@artists = []
         true
+    end
+
+    def self.artist_duplicate_check(artist_name)
+        if !Artist.all.empty?
+            Artist.all.each do |artist|
+                return artist if artist.name.include?(artist_name)
+            end
+        end
+        new_artist = Artist.new
+        new_artist.name = artist_name
+        new_artist
     end
 end

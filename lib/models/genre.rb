@@ -30,4 +30,17 @@ class Genre
     def self.genres # redundant method required to pass genre_spec.rb
         self.all 
     end
+
+    def self.genre_duplicate_check(genre_name)
+        Genre.all.each do |genre|
+            return genre if genre.name.include?(genre_name)
+        end
+        new_genre = Genre.new
+        new_genre.name = genre_name
+        new_genre
+    end
+
+
+
+
 end
