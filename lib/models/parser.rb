@@ -20,7 +20,9 @@ class LibraryParser
     end
 
     def get_artist
-      @files[2].split(" - ").first
+      all_artists = @files.collect do |file|
+        file.split(" - ").first
+      end
     end
 
     def get_genre
