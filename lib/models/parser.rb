@@ -1,6 +1,7 @@
 require 'pry'
 
 class LibraryParser
+require 'pry'
 
     attr_accessor :files, :path
 
@@ -30,13 +31,12 @@ class LibraryParser
       file.split(" - ").first
     end
 
-    def get_genre
-
+    def get_genre(file)
+      file.split('[')[-1].split(']').first
     end
 
 
 end
-
 
 
   # def get_artist
@@ -44,6 +44,7 @@ end
   #       file.split(" - ").first
   #     end
 #
+
 
 # goal
 # parser = LibraryParser.new('/Users/avi/fs-playlister-rb/db/data')
