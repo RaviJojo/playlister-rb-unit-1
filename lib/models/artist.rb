@@ -14,7 +14,8 @@ class Artist
         self.songs << song
         self.genres << song.genre # add the song's genre to the artist's @genres
 
-        # adding the artist to the genre -- this will not be robust, it will only work if the song has a genre before it is added to the artist, but the artist will not get added to the genre if it is added to the song later
+        song.artist = self # add artist to the song's
+
         if song.genre # check to make sure the song has been given a genre
             if !song.genre.artists.include?(self) # check to see if the artist has already been included in the genre
                 song.genre.artists << self # if not, add to @artists of the genre
