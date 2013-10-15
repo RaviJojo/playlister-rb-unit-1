@@ -1,4 +1,5 @@
 class LibraryParser
+require 'pry'
 
     attr_accessor :files, :path
 
@@ -11,6 +12,7 @@ class LibraryParser
 
     def fill_files
         @files = Dir.entries(self.path)
+        binding.pry
     end
 
     def get_title
@@ -22,8 +24,8 @@ class LibraryParser
 
     end
 
-    def get_genre
-
+    def get_genre(file)
+      file.split('[')[-1].split(']').first
     end
 
 
