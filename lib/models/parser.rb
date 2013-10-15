@@ -1,4 +1,3 @@
-require 'pry'
 class LibraryParser
 
     attr_accessor :files, :path
@@ -14,27 +13,27 @@ class LibraryParser
         @files = Dir.entries(self.path)
     end
 
+
     def get_title(path)
         songs_titles = @files.collect do |filename|
             filename[/#{Regexp.escape(" - ")}(.*?)#{Regexp.escape("[")}/m, 1].strip
         end
+
+    def get_title
+        
+
     end
 
     def get_artist
-
+      @files[2].split(" - ").first
     end
 
     def get_genre
 
     end
 
-
-
-
-
-
 end
-binding.pry
+
 
 #
 
