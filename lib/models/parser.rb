@@ -1,5 +1,3 @@
-require 'pry'
-
 class LibraryParser
 require 'pry'
 
@@ -17,15 +15,10 @@ require 'pry'
         @files = @files[2..-1]
     end
 
-    def parse_all
 
+    def get_title(file)
+        file[/#{Regexp.escape(" - ")}(.*?)#{Regexp.escape("[")}/m, 1].strip
     end
-
-
-    def get_title
-
-    end
-
 
     def get_artist(file)
       file.split(" - ").first
