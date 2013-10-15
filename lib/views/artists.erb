@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Artists!</title>
+</head>
+<body>
+    <h1>Here are the Artists</h1>
+
+    <ul>
+       <% artists.each do |artist| %>
+        <li><a href="artists/<%= artist.name.downcase.gsub(/\s()&/, '-')%>.html"><%= artist.name %></li> 
+        <% end %>
+    </ul>
+
+
+
+</body>
+</html>

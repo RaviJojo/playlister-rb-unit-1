@@ -26,7 +26,6 @@ class Artist
     end
 
     def self.all
-        puts "Artist.all called!"
         @@artists
     end
 
