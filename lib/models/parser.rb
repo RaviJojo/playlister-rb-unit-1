@@ -1,3 +1,5 @@
+require 'pry'
+
 class LibraryParser
 
     attr_accessor :files, :path
@@ -24,20 +26,17 @@ class LibraryParser
     end
 
     def get_artist
-
+      @files[2].split(" - ").first
     end
 
     def get_genre
 
     end
 
-    
-
-
-
 
 end
 
+binding.pry
 
 #
 
