@@ -11,8 +11,7 @@ songs = Song.all
 index = ERB.new(File.open('lib/views/index.erb').read)
 artists_page = ERB.new(File.open('lib/views/artists.erb').read)
 genres_page = ERB.new(File.open('lib/views/genres.erb').read)
-
-
+artist_page = ERB.new(File.open('lib/views/artist.erb').read)
 
 File.open('_site/index.html', 'w+') do |f|
   f << index.result(binding)
@@ -25,6 +24,16 @@ end
 File.open('_site/artists.html', 'w+') do |f|
     f << artists_page.result(binding)
 end
+
+
+Artist.all.each do |artist_object|
+    File.open("_site/#{artist_object.name.downcase.gsub(' ','-')}.html", "w+") do |f|
+        f << artist_page.result(binding)
+    end
+end
+
+
+
 
 
 # show = ERB.new(File.open('lib/templates/show.erb').read)
