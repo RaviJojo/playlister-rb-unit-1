@@ -16,12 +16,38 @@ describe LibraryParser do
         parser.files.should include("Soulja Boy - Zan With That Lean [hip-hop].mp3")
     end
 
-
-
-
-    it "can get the artist name from a file name" do
+    it "gets the artist name from a file name" do
+        artist1 = parser.get_artist(parser.files.first)
+        artist2 = parser.get_artist(parser.files.last)
         
+        artist1.should eq("Action Bronson")
+        artist2.should eq("Zoo Kid")
+
     end
+
+    it "gets the genre from a file name" do 
+        genre1 = parser.get_genre(parser.files.first)
+        genre2 = parser.get_genre(parser.files.last)
+
+        genre1.should eq("indie")
+        genre2.should eq("hip-hop")
+
+    end
+
+    it "gets the song title from a file name" do 
+        title1 = parser.get_title(parser.files.first)
+        title2 = parser.get_title(parser.files.last)
+
+        title1.should eq("Larry Csonka")
+        title2.shoudl eq("Out Getting Ribs")
+
+    end
+
+
+
+
+
+
 
 end
 

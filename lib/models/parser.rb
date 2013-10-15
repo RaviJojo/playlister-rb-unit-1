@@ -11,10 +11,15 @@ class LibraryParser
 
     def fill_files
         @files = Dir.entries(self.path)
+        @files = @files[2..-1]
     end
 
+    def parse_all
+
+    end
+
+
     def get_title
-        
 
     end
 
@@ -26,7 +31,7 @@ class LibraryParser
 
     end
 
-
+    
 
 
 
