@@ -48,4 +48,10 @@ class Artist
         new_artist.name = artist_name
         new_artist
     end
+
+    def url
+        "#{self.name.downcase.gsub(' ', '-')}.html"
+    end
+    
+
 end

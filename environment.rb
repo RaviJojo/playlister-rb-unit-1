@@ -7,5 +7,7 @@ require_relative './lib/models/site-generator.rb'
 
 
 require 'erb'
+require 'pry'
+require 'cgi'
 
 DATA_PATH = "/Users/josephoconor/flatiron/labs/ruby-003-unit-1/playlister/db/data"

@@ -40,6 +40,9 @@ class Genre
         new_genre
     end
 
+    def url
+        "#{self.name.downcase.gsub(' ', '')}.html"
+    end
 
 
 

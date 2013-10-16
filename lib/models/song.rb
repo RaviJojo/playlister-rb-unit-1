@@ -17,4 +17,8 @@ class Song
     @@songs 
   end
 
+  def url
+    "#{self.name.downcase.gsub(' ', '-')}.html"
+  end
+  
 end

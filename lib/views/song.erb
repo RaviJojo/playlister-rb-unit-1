@@ -1,0 +1,13 @@
+<html>
+<head><title>THis is a page for <%= song_object.name%> !!!</title></head>
+
+<body>
+
+    <h1><%= song_object.name %></h1>
+
+    <p>This song is by: <a href="../artists/<%= song_object.artist.url %>"><%= song_object.artist.name %> </a></p>
+
+    <p>It is a song in the <a href="../genres/<%= song_object.genre.url %>"><%= song_object.genre.name %></a> genre!</p>
+</body>
+
+</html>
