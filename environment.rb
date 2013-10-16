@@ -5,6 +5,7 @@ require_relative './lib/models/parser.rb'
 require_relative './lib/models/cli-class.rb'
 require_relative './lib/models/site-generator.rb'
 require_relative './lib/models/song-scraper.rb'
+require_relative './lib/models/song-ytscraper.rb'
 
 
 require 'erb'
