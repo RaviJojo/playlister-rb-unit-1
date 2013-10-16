@@ -6,7 +6,7 @@
 
         <h1><%= artist_object.name %></h1>
 
-        <h3>Songs</h3>
+        <h3><%= artist_object.songs.size %> Song<%= if artist_object.songs.size > 1; 's'; end %></h3>
         <ul>
             <% artist_object.songs.each do |song| %>
             <li><a href="../songs/<%= song.url %>"><%= song.name %></a></li>
