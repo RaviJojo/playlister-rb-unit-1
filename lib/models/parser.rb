@@ -1,4 +1,4 @@
-class LibraryParser
+    class LibraryParser
 require 'pry'
 
     attr_accessor :files, :path
@@ -46,7 +46,7 @@ require 'pry'
 
 
     def get_title(file)
-        file[/#{Regexp.escape(" - ")}(.*?)#{Regexp.escape("[")}/m, 1].strip
+        file[/#{Regexp.escape(" - ")}(.*?)#{Regexp.escape(" [")}/m, 1]
     end
 
     def get_artist(file)

@@ -8,4 +8,4 @@ require_relative './lib/models/site-generator.rb'
 
 require 'erb'
 
-DATA_PATH = "/Users/josephoconor/flatiron/labs/ruby-003-unit-1/playlister/db/data"
+DATA_PATH = "/Users/johnrichardson/Development/code/flatiron/ruby/playlister-rb-unit-1/db/data"
