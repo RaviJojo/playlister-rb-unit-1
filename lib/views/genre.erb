@@ -9,7 +9,12 @@
     <h3>Artists of this genre</h3>
     <ul>
         <% genre_object.artists.each do |artist| %>
-        <li><a href="../artists/<%= artist.url %>"><%= artist.name %></a></li>
+        <li><a href="../artists/<%= artist.url %>">
+                <%= "#{artist.name} -" %> 
+            </a>
+            <% genre_songs = artist.songs.collect {|song| song.name}%>
+            <%= genre_songs.join(", ") %>
+        </li>
         <% end %>
     </ul>
 
