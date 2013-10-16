@@ -13,7 +13,7 @@
     <% intr = lyrics.split(" ") & SongScraper::EXPLICIT_CONTENT %>
     <% if !intr.empty? %>
     <font color="red"><%= SongScraper::WARNING %></font>
-
+    <% end %>
     <h3>The Lyrics</h3>
     <p><%= lyrics %></p>
 
