@@ -6,9 +6,9 @@ class SongScraper
 
    SEARCH_URL = "http://www.songlyrics.com/index.php?section=search&searchW="
 
-   EXPLICIT_CONTENT = ["nigga", "pussy", "ass", "shit", "fuck", "vagina"]
+   EXPLICIT_CONTENT = ["nigga", "pussy", "ass", "shit", "fuck", "vagina", "bitch", "dick", "fuckin'", "fuckin", "fucked"]
 
-   WARNING = "Explicit Content!"
+   WARNING = "Warning: Explicit Content!"
 
     def initialize(query)
         @query = query
