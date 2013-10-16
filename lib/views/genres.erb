@@ -3,11 +3,11 @@
     <title>Genres!</title>
 </head>
 <body>
-    <h1>Here are the Genres</h1>
+    <h1>Here are the Genres!</h1>
 
     <ul>
-       <% genres.each do |genre| %>
-        <li><a href="genres/<%= genre.url %>"><%= genre.name %></li>
+       <% genres.sort_by {|genre| genre.songs.count}.reverse.each do |genre| %>
+        <li><a href="genres/<%= genre.url %>"><%= genre.name %></a><%=": #{genre.songs.count} Songs, #{genre.artists.count} Artists"%></li>
         <% end %>
     </ul>
 
