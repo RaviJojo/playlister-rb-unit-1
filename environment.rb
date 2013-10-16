@@ -13,4 +13,4 @@ require 'cgi'
 require 'nokogiri'
 require 'open-uri'
 
-DATA_PATH = "/Users/josephoconor/flatiron/labs/ruby-003-unit-1/playlister/db/data"
+DATA_PATH = "#{Dir.pwd}/db/data"

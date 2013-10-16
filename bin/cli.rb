@@ -5,7 +5,7 @@ require_relative '../environment.rb'
 # boot the CLI
 
 
-parser = LibraryParser.new("/Users/josephoconor/flatiron/labs/ruby-003-unit-1/playlister/db/data")
+parser = LibraryParser.new(DATA_PATH)
 array = parser.call
 
 cli = PlaylisterCLI.new(array)
