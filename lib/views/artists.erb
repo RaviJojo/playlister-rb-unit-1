@@ -7,7 +7,7 @@
 
     <ul>
        <% artists.each do |artist| %>
-        <li><a href="artists/<%= artist.name.downcase.gsub(/\s()&/, '-')%>.html"><%= artist.name %></li> 
+        <li><a href="artists/<%= artist.url %>"><%= artist.name %></li> 
         <% end %>
     </ul>
 

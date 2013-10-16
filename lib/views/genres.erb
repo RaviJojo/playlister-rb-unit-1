@@ -7,7 +7,7 @@
 
     <ul>
        <% genres.each do |genre| %>
-        <li><a href="genres/<%= genre.name.downcase %>.html"><%= genre.name %></li> 
+        <li><a href="genres/<%= genre.url %>"><%= genre.name %></li>
         <% end %>
     </ul>
 

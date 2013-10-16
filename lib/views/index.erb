@@ -6,13 +6,13 @@
     <h2>Artists</h2>
     <ul>
       <% artists.each do |artist| %>
-      <li><a href="artists/<%= artist.name.downcase.gsub(' ','-') %>.html"><%= artist.name %></a></li>
+      <li><a href="artists/<%= artist.url %>"><%= artist.name %></a></li>
       <% end %>
     </ul>
     <h2>Genres</h2>
     <ul>
       <% genres.each do |genre| %>
-      <li><a href="genres/<%= genre.name.downcase %>.html"><%= genre.name %></a></li>
+      <li><a href="genres/<%= genre.url %>"><%= genre.name %></a></li>
       <% end %>
     </ul>
   </body>
