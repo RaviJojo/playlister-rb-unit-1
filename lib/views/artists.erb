@@ -3,15 +3,11 @@
     <title>Artists!</title>
 </head>
 <body>
-    <h1>Here are the Artists</h1>
-
+    <h1>Here are the <%= artists.size %> Artists</h1>
     <ul>
        <% artists.each do |artist| %>
-        <li><a href="artists/<%= artist.url %>"><%= artist.name %></li> 
-        <% end %>
+        <li><a href="artists/<%= artist.url %>"><%= artist.name %></a>: <%= artist.songs.size %> song<%= if artist.songs.size > 1; 's'; end %></li> 
+       <% end %>
     </ul>
-
-
-
 </body>
 </html>
