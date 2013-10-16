@@ -1,5 +1,3 @@
-require 'pry'
-
 class PlaylisterCLI
   attr_accessor :songs
 
@@ -48,7 +46,6 @@ class PlaylisterCLI
     print "Enter the song number you want to play: "
     number = gets.chomp.to_i
     puts "Playing #{self.songs[number-1].name} by #{self.songs[number-1].artist.name}..."
-    sleep(1)
     puts
   end
 

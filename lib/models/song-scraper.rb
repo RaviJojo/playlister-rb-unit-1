@@ -1,5 +1,3 @@
-require_relative '../../environment.rb'
-
 class SongScraper
 
   attr_accessor :query, :target_page, :lyrics

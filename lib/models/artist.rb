@@ -1,4 +1,3 @@
-require 'pry'
 class Artist
   attr_accessor :name, :songs, :genres
 
@@ -18,9 +17,9 @@ class Artist
     song.artist = self # add artist to the song's
 
     if song.genre # check to make sure the song has been given a genre
-        if !song.genre.artists.include?(self) # check to see if the artist has already been included in the genre
-            song.genre.artists << self # if not, add to @artists of the genre
-        end
+      if !song.genre.artists.include?(self) # check to see if the artist has already been included in the genre
+        song.genre.artists << self # if not, add to @artists of the genre
+      end
     end
 
   end
