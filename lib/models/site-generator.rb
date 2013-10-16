@@ -7,7 +7,6 @@ class SiteGenerator
         @genres = genre_array
         @songs = song_array
         @pages = ["index", "artists", "genres", "artist", "genre"]
-        @all_cat = @artist + @genres + @songs
 
     end
 
