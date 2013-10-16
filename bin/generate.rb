@@ -3,10 +3,20 @@ require_relative '../environment.rb'
 array = LibraryParser.new(DATA_PATH)
 array.call
 
-
 artists = Artist.all
 genres = Genre.all
 songs = Song.all
+
+# generate all genre pages using a generic generator, passing in 'genres'
+# generate all artist pages similarly
+# generate all song pages similarly
+
+# OR: generate all pages via a "site-generator.call" blanket method
+
+# move all below code to separate methods/files
+# and then generate them all
+
+# ^ that should probably be part of the general "site-generator.call"
 
 index = ERB.new(File.open('lib/views/index.erb').read)
 artists_page = ERB.new(File.open('lib/views/artists.erb').read)
@@ -32,15 +42,3 @@ Artist.all.each do |artist_object|
     end
 end
 
-
-
-
-
-# show = ERB.new(File.open('lib/templates/show.erb').read)
-# # For each dog, first, cast the dog into instance var
-
-# songs.each do |song|
-#   File.open("_site/songs/#{song.url}.html", 'w+') do |f|
-#     f << show.result(binding)
-#   end
-# end
