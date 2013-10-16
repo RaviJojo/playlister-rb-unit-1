@@ -1,13 +1,20 @@
+<!-- The genre index must list all the genres. This list must be sorted by the amount of songs. In addition to the Genres name, the total song and artist count should be listed along side it. -->
+
+<!-- The genre name should link to the genre's individual page within _site/genres. -->
+      <!-- Folk: 8 Songs, 3 Artists -->
+
+<!-- Remember to uncomment song.erb! -->
+
 <html>
 <head>
     <title>Genres!</title>
 </head>
 <body>
-    <h1>Here are the Genres</h1>
+    <h1>Here are the Genres!</h1>
 
     <ul>
-       <% genres.each do |genre| %>
-        <li><a href="genres/<%= genre.url %>"><%= genre.name %></li>
+       <% genres.sort_by {|genre| genre.songs.count}.reverse.each do |genre| %>
+        <li><a href="genres/<%= genre.url %>"><%= genre.name %></a><%=" - #{genre.songs.count} songs"%></li>
         <% end %>
     </ul>
 
