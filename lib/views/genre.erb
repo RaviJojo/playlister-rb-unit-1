@@ -13,11 +13,22 @@
                 <%= "#{artist.name}" %>
             </a>
                 <%= " - " %>
+            <% if false %>
             <% genre_songs = artist.songs.collect {|song| song.name}%>
             <%= genre_songs.join(", ") %>
+            <% end %>
+
+            <% artist.songs.each do |song| %>
+                <a href="../songs/<%= song.url %>"><%= song.name %></a>
+            <% end %>
+
         </li>
         <% end %>
     </ul>
+
+
+
+
 
 <% if false %>
     <h3>Songs of this genre</h3>
