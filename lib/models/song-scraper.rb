@@ -19,7 +19,6 @@ class SongScraper
   def set_all
     parse_search
     scrape_target
-    htmlify_lyrics
   end
 
   def parse_search
@@ -36,42 +35,6 @@ class SongScraper
 
   def htmlify_lyrics
     self.lyrics.gsub("\n","<br>")
-  end
-
-
-end
-
-
-class SongYTScraper
-
-  attr_accessor :query, :target_page, :lyrics
-
-  SEARCH_URL = "http://www.youtube.com/results?search_query="
-
-  def initialize(query)
-    @query = query
-    @target_page = ''
-
-    set_all
-  end
-
-  def set_all
-    parse_search
-  end
-
-  def parse_search
-    doc = Nokogiri::HTML(open(SEARCH_URL+"#{self.query}"))
-    self.target_page = doc.css('ol a.yt-uix-sessionlink').first.attr('href').split("=").last
-    puts "grabbed the embed link from the query #{self.query}"
-  end
-
-  # def scrape_target # returns a string
-  #     target = Nokogiri::HTML(open("http://www.youtube.com/#{self.target_page}"))
-  #     puts "grabbed the  for #{self.query}!"
-  # end
-
-  def htmlify_lyrics
-    self.lyrics.gsub("\n","<p>")
   end
 
 
