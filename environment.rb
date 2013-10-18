@@ -13,5 +13,8 @@ require 'pry'
 require 'cgi'
 require 'nokogiri'
 require 'open-uri'
+require 'yaml'
+require 'obscenity'
+
 
 DATA_PATH = "#{Dir.pwd}/db/data"

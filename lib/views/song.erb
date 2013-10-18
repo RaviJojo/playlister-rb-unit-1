@@ -1,5 +1,5 @@
 <html>
-<head><title>This is a page for <%= song_object.name%> !!!</title></head>
+<head><meta charset="utf-8"><title>This is a page for <%= song_object.name%> !!!</title></head>
 
 <body>
 
@@ -10,8 +10,7 @@
     <p>It is a song in the <a href="../genres/<%= song_object.genre.url %>"><%= song_object.genre.name %></a> genre!</p>
 
     <% lyrics = SongScraper.new(CGI::escape(song_object.name + " " + song_object.artist.name)).htmlify_lyrics %>
-    <% intr = lyrics.split(" ") & SongScraper::EXPLICIT_CONTENT %>
-    <% if !intr.empty? %>
+    <% if Obscenity.profane?(lyrics) %>
     <font color="red"><%= SongScraper::WARNING %></font>
     <% end %>
     <h3>The Lyrics</h3>
